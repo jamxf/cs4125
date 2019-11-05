@@ -1,5 +1,6 @@
 public class Part{
     
+    private int partID;
     private String name;
     private String category;
     private String description;
@@ -8,8 +9,21 @@ public class Part{
     private int stock;
     private int compatability;
     
-    public Part(){
+    public Part(int id, String name, String category, String description, Double price, String status, int compatability){
+        this.partID = id;
+        this.name = name;
+        this.category = category;
+        this.description = description;
+        this.price = price;
+        this.status = status;
+        this.compatability = compatability;
+    }
 
+    /**
+     * @return the partID
+     */
+    public int getPartID() {
+        return partID;
     }
 
     /**

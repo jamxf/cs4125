@@ -6,9 +6,24 @@ public class PC {
     private String status;
     private String progressPicURL;
     private List<Part> parts;
+    private int orderID;
 
     public PC(){
 
+    }
+
+    public PC(int orderID){
+        this.orderID = orderID;
+        this.pcID = 123 * orderID;
+        this.status = "New";
+        this.progressPicURL = "http://www.ourpcbuilder.com/404";
+    }
+
+    /**
+     * @return the orderID
+     */
+    public int getOrderID() {
+        return orderID;
     }
 
     /**
@@ -47,5 +62,14 @@ public class PC {
 
     public void addPart(Part newPart){
         parts.add(newPart);
+    }
+
+    @Override
+    public String toString() {
+        String output = "Order ID: " + this.orderID + "\n";
+        output += "PC ID: " + this.pcID + "\n";
+        output += "Progress pic: " + this.progressPicURL + "\n";
+
+        return output;
     }
 }
