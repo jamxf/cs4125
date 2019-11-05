@@ -7,4 +7,24 @@ public class Order{
     public Order(){
 
     }
+
+    /**
+     * @return the orderID
+     */
+    public int getOrderID() {
+        return orderID;
+    }
+    /**
+     * @return the orderPC
+     */
+    public PC getOrderPC() {
+        return orderPC;
+    }
+    /**
+     * @return the trackingNo
+     */
+    public String getTrackingNo() {
+        return trackingNo;
+    }
+    
 }

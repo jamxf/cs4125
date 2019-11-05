@@ -11,4 +11,50 @@ public class Part{
     public Part(){
 
     }
+
+    /**
+     * @return the category
+     */
+    public String getCategory() {
+        return category;
+    }
+
+    /**
+     * @return the compatability
+     */
+    public int getCompatability() {
+        return compatability;
+    }
+
+    /**
+     * @return the description
+     */
+    public String getDescription() {
+        return description;
+    }
+    /**
+     * @return the name
+     */
+    public String getName() {
+        return name;
+    }
+    /**
+     * @return the price
+     */
+    public Double getPrice() {
+        return price;
+    }
+    /**
+     * @return the status
+     */
+    public String getStatus() {
+        return status;
+    }
+    /**
+     * @return the stock
+     */
+    public int getStock() {
+        return stock;
+    }
+    
 }
