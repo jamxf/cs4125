@@ -1,9 +1,23 @@
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Date;
+
 public class Login{
 
     private String username;
     private String password;
     private String accountType;
     private boolean isLoggedIn;
+    
+    private Connection connect = null;
+    private Statement statement = null;
+    private PreparedStatement preparedStatement = null;
+    private ResultSet resultSet = null;
 
     public Login(){
 
@@ -13,7 +27,7 @@ public class Login{
     public Login(int user, String pass){
         this.username = user;
         this.password = pass;
-        this.trackingNo = "NoTrackingNumSet";
+        this.isLoggedIn;
     }
 
     public getUserName(){
@@ -22,6 +36,11 @@ public class Login{
 
     public getType(){
         return this.sccountType;
+
+    }
+
+    public boolean checkDetails(){
+        
 
     }
 
