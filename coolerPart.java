@@ -1,4 +1,4 @@
-public class gpuPart extends Part{
+public class coolerPart extends Part{
     
     private int partID;
     private String name;
@@ -13,12 +13,12 @@ public class gpuPart extends Part{
     private String height;
 
 
-    public gpuPart(){
+    public coolerPart(){
 
 
     }
     
-    public gpuPart(int id, String name, String category, 
+    public coolerPart(int id, String name, String category, 
     String description, Double price, String status, int compatability, 
     String V, String pU, String formT, String h){
         this.formType = formT;
@@ -32,8 +32,10 @@ public class gpuPart extends Part{
         this.compatability = compatability;
         this.Vendor = V;
         this.powerUsage = pU;
+        this.formType = formT;
+        this.height = t;
     }
-
+    
     public String getFormType(){
         return formType;
     }
