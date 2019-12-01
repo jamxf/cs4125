@@ -18,9 +18,7 @@ public class coolerPart extends Part{
 
     }
     
-    public coolerPart(int id, String name, String category, 
-    String description, Double price, String status, int compatability, 
-    String V, String pU, String formT, String h){
+    public coolerPart(int id, String name, String category, String description, Double price, String status, int compatability, String V, String pU, String formT, String h){
         this.formType = formT;
         this.height = h;
         this.partID = id;
@@ -34,6 +32,16 @@ public class coolerPart extends Part{
         this.powerUsage = pU;
         this.formType = formT;
         this.height = t;
+    }
+
+    public void add(Part newPart){
+        throw new UnsupportedOperationException();
+    }
+    public void remove(Part newPart){
+        throw new UnsupportedOperationException();
+    }
+    public Part getPart(int partIndex){
+        throw new UnsupportedOperationException();
     }
     
     public String getFormType(){
