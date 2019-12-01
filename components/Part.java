@@ -19,6 +19,15 @@ public class Part{
         this.compatability = compatability;
     }
 
+    public void add(Part newPart){
+        throw new UnsupportedOperationException();
+    }
+    public void remove(Part newPart){
+        throw new UnsupportedOperationException();
+    }
+    public Part getPart(int partIndex){
+        throw new UnsupportedOperationException();
+    }
     /**
      * @return the partID
      */
