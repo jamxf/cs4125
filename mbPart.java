@@ -10,7 +10,7 @@ public class mbPart extends Part{
     private int compatability;
     private String Vendor;
     private int powerUsage;
-    private String cpuType
+    private String cpuSocket
     private boolean M2;
     private String formType;
 
@@ -30,9 +30,19 @@ public class mbPart extends Part{
         this.compatability = compatability;
         this.Vendor = V;
         this.powerUsage = pU;
-        this.cpuType = cpuT;
+        this.cpuSocket = cpuT;
         this.M2 = m;
         this.formType = formT;
+    }
+
+    public void add(Part newPart){
+        throw new UnsupportedOperationException();
+    }
+    public void remove(Part newPart){
+        throw new UnsupportedOperationException();
+    }
+    public Part getPart(int partIndex){
+        throw new UnsupportedOperationException();
     }
 
     /**
@@ -95,8 +105,8 @@ public class mbPart extends Part{
         return powerUsage;
     }
 
-    public int getCPUtype(){
-        return this.cpuType;
+    public int getSocket(){
+        return this.cpuSocket;
     }
     public boolean getM2(){
         return M2;
