@@ -20,11 +20,13 @@ class Build implements Visitable{
     private Double hoursOfLabour;
     private Double labourCost;
     private ArrayList<String> progressPics;
+    private String status;
     
     public Build(Double price){
         this.buildID = UUID.randomUUID().toString();
         this.price = price;
         labourCost = 20.00;
+        status = "New";
     }
     
     public void setPrice(Double newPrice){
@@ -71,6 +73,15 @@ class Build implements Visitable{
         this.labourCost = cost;
     }
 
+    public String getStatus(){
+        return this.status;
+    }
+    
+    public void setStatus(String newStatus){
+        this.status = newStatus;
+    }
+    
+    
     @Override
     public Double accept(Visitor visitor) {
         return visitor.visit(this);

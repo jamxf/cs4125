@@ -13,6 +13,9 @@ class Shipping implements Visitable {
     
     private Double price;
     private String address;
+    private Double weight;
+    private String trackingNumber;
+
     
     public Shipping(Double weight){
         if (weight > 20.00){
