@@ -5,10 +5,22 @@
  */
 package com.unstoppable.orders;
 
+import java.util.UUID;
+
 /**
  *
  * @author jamesfoley
  */
 public class Order {
+    private String orderID;
+    //private User user;
+    private Build build;
+    private Shipping ship;
+    private Double price;
+    
+    
+    public Order(){
+        orderID = UUID.randomUUID().toString();
+    }
     
 }
