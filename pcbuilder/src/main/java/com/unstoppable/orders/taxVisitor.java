@@ -35,7 +35,5 @@ public class taxVisitor implements Visitor{
         Double tax = Double.parseDouble(df.format(price * 0.125));
         price = tax + price;
         return price;    
-    }
-    
-    
+    }   
 }
