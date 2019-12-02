@@ -138,8 +138,8 @@ public class Login extends javax.swing.JFrame {
             
             if(rs.next())
             {
-                CustomerHome.main(new String[0]);
-                this.setVisible(false);
+                    CustomerHome.main(new String[0]);
+                    this.setVisible(false);
                 
 
             }

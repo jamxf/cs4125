@@ -19,7 +19,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.JOptionPane;
+import javax.swing.*;
+import java.awt.*;
 
 /**
  *
@@ -30,9 +31,29 @@ public class PreBuilt {
     private ArrayList<Build> Builds;
     
     
-    public void printBuilds(){
+    public void printBuilds(){ //author brendancross
+        JFrame jFrame = new JFrame();
+        jFrame.setTitle("Entry Level PC Build");
+        jFrame.setSize(500, 800);
+        jFrame.setLocationRelativeTo(null);
+        JTextArea jTextArea = new JTextArea();
+        jFrame.setVisible(true);
+        jTextArea.setEditable(false);
+        
         for (Build b : Builds){
             System.out.println(b);
+            String str = b.toString();
+            String split[] = str.split(",", 0);
+            
+            for (String s: split){
+                System.out.println(s);
+                if(s.contains("price"))
+                {
+                    jTextArea.append("\n");
+                }
+                jTextArea.append(s + "\n");
+                jFrame.add(jTextArea);
+            }
         }
     }
     
@@ -41,7 +62,7 @@ public class PreBuilt {
         PreparedStatement ps;
         Statement st;
         ResultSet rs = null;
-               
+              
         String query = "Select * from prebuilts;";
         
         try {

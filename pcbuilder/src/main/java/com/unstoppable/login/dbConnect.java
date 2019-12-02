@@ -7,7 +7,7 @@ package com.unstoppable.login;
 
 /**
  *
- * @author jamesfoley
+ * @author brendancross
  */
 import java.sql.Connection;
 import java.sql.DriverManager;

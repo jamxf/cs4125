@@ -36,7 +36,7 @@ public class Build implements Visitable{
     
     public void addPart(Part newPart){
         parts.add(newPart);
-        price += newPart.getPrice();
+        //price += newPart.getPrice();
     }
     
     public ArrayList getParts(){
