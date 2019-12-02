@@ -19,7 +19,7 @@ public class Register extends javax.swing.JFrame {
 
     /** Creates new form Register */
     public Register() {
-        initComponents();                initComponents();
+        initComponents();
         setTitle("Register");
         this.setLocationRelativeTo(null);
 
@@ -42,15 +42,12 @@ public class Register extends javax.swing.JFrame {
         passwordLabel = new javax.swing.JLabel();
         emailLabel = new javax.swing.JLabel();
         emailField = new javax.swing.JTextField();
+        accountType = new javax.swing.JComboBox<>();
+        accountLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         usernameField.setText("Choose a Username");
-        usernameField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                usernameFieldActionPerformed(evt);
-            }
-        });
 
         passwordField.setText("jPasswordField1");
 
@@ -76,62 +73,66 @@ public class Register extends javax.swing.JFrame {
 
         emailField.setText("Enter your email");
 
+        accountType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Customer", "Builder" }));
+
+        accountLabel.setText("Account Type");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(54, 54, 54)
+                .addContainerGap(54, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(usernameLabel)
-                        .addComponent(passwordLabel))
-                    .addComponent(emailLabel))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(accountLabel)
+                    .addComponent(passwordLabel)
+                    .addComponent(emailLabel)
+                    .addComponent(usernameLabel))
+                .addGap(18, 18, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(cancelButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
                         .addComponent(registerbButton))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(emailField, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(passwordField, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(usernameField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addGap(77, 77, 77))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(emailField, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(passwordField, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(usernameField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE)
+                        .addComponent(accountType, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(65, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(53, Short.MAX_VALUE)
+                .addContainerGap(50, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(emailLabel)
                     .addComponent(emailField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(18, 18, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(usernameLabel)
                     .addComponent(usernameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(18, 18, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(passwordLabel)
                     .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(18, 18, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(accountType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(accountLabel))
+                .addGap(18, 18, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cancelButton)
                     .addComponent(registerbButton))
-                .addGap(91, 91, 91))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void usernameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_usernameFieldActionPerformed
-
     private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
-        System.exit(0);
+        this.setVisible(false);
+        new Menu().setVisible(true);
     }//GEN-LAST:event_cancelButtonActionPerformed
 
     private void registerbButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerbButtonActionPerformed
@@ -143,39 +144,50 @@ public class Register extends javax.swing.JFrame {
         System.out.println(emailField.getText());
         String usernameIn = usernameField.getText();
         String passwordIn = String.valueOf(passwordField.getPassword());
+        String selectAccountType = accountType.getItemAt(accountType.getSelectedIndex());
         
         System.out.println(emailIn + usernameIn +  passwordIn);
-       
-        String query = "INSERT INTO users (email, username, password) " + " VALUES ("+ emailIn + ", "+ usernameIn +", "+ passwordIn+");";
-        System.out.print(query);
         
-        try {
-            Connection myConn = dbConnect.getConnection();
-            System.out.println("Connected to the database...");
+        System.out.println(emailIn.equals("Enter your email") );
+        
+        if(emailIn.equals("Enter your email") || usernameIn.equals("Choose a Username") || passwordIn.equals("jPasswordField1"))
+        {
+            JOptionPane.showMessageDialog(null, "Please fill in all fields");
+        }
+        else
+        {       
+            String query = ("INSERT INTO users (username, password, email, type) "+"VALUES ('" + usernameIn + "', '" + passwordIn + "', '" + emailIn + "', '" + selectAccountType + "'); ");
+            System.out.print(query);
 
-            //ps = myConn.createStatement(query);
-            st = myConn.createStatement();
-            
-            //ps.setString(1, usernameIn);
-            //ps.setString(2, passwordIn);
-                
-            //rs = ps.executeQuery();
-            updateInt = st.executeUpdate(query);
-            
-            //rs = st.executeQuery();
-            
-            if(updateInt == 0)
-            {
-                JOptionPane.showMessageDialog(null, "Account already exists");
+            try {
+                Connection myConn = dbConnect.getConnection();
+                System.out.println("Connected to the database...");
 
+                //ps = myConn.createStatement(query);
+                st = myConn.createStatement();
+
+                //ps.setString(1, usernameIn);
+                //ps.setString(2, passwordIn);
+
+                //rs = ps.executeQuery();
+                updateInt = st.executeUpdate(query);
+
+                //rs = st.executeQuery();
+
+                if(updateInt == 0)
+                {
+                    JOptionPane.showMessageDialog(null, "Account already exists");
+                }
+                else
+                {
+                    JOptionPane.showMessageDialog(null, "Account successfully created!");
+                    this.setVisible(false);
+                    new Menu().setVisible(true);
+                }
+
+            } catch (SQLException ex) {
+                Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
             }
-            else
-            {
-                JOptionPane.showMessageDialog(null, "Account successfully created!");
-            }
-            
-        } catch (SQLException ex) {
-            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }//GEN-LAST:event_registerbButtonActionPerformed
@@ -216,6 +228,8 @@ public class Register extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel accountLabel;
+    private javax.swing.JComboBox<String> accountType;
     private javax.swing.JButton cancelButton;
     private javax.swing.JTextField emailField;
     private javax.swing.JLabel emailLabel;
