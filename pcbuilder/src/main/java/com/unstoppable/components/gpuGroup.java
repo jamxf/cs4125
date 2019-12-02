@@ -15,7 +15,7 @@ public class gpuGroup extends Part{
 
     }
     public gpuGroup(String gn, String gd){
-        this.groupName =gn;
+        this.groupName = gn;
         this.groupDescription = gd;
     }
 

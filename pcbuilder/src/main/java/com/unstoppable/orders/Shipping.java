@@ -42,7 +42,23 @@ class Shipping implements Visitable {
     }
     
     public Double getPrice() {
-        return price;
+        return this.price;
+    }
+    
+    public void setWeight(Double newWeight){
+        this.weight = newWeight;
+    }
+    
+    public Double getWeight(){
+        return this.weight;
+    }
+    
+    public void setTrackingNumber(String tn){
+        this.trackingNumber = tn;
+    }
+    
+    public String getTrackingNumber(){
+        return this.trackingNumber;
     }
 
     @Override

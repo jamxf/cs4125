@@ -1,6 +1,6 @@
 package com.unstoppable.components;
 
-public class casePart{
+public class casePart extends Part{
     
     private int partID;
     private String name;
@@ -30,9 +30,11 @@ public class casePart{
     public String getSize(){
         return size;
     }
-    public boolean getLCS(){
+    
+    public Boolean getLCS(){
         return liquidCoolingSupport;
     }
+    
     /**
      * @return the partID
      */

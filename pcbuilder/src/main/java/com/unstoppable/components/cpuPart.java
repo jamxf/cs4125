@@ -13,6 +13,9 @@ public class cpuPart extends Part{
     private String Vendor;
     private int powerUsage;
     private String socket;
+    private String cpuType;
+    private boolean M2;
+    private String formType;
 
 
     public cpuPart(){
@@ -106,7 +109,6 @@ public class cpuPart extends Part{
     public int getPU() {
         return powerUsage;
     }
-
 
     
 }

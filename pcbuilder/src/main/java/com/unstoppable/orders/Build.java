@@ -26,7 +26,9 @@ class Build implements Visitable{
         this.buildID = UUID.randomUUID().toString();
         this.price = price;
         labourCost = 20.00;
+        hoursOfLabour = 1.0;
         status = "New";
+        parts = new ArrayList<Part>();
     }
     
     public void setPrice(Double newPrice){
@@ -35,9 +37,12 @@ class Build implements Visitable{
     
     public Double getPrice() {
         price += hoursOfLabour * labourCost;
-        parts.forEach((p) -> {
+        if(parts.size() > 0){
+            parts.forEach((p) -> {
             price += p.getPrice();
         });
+        }
+        
         return price;
     }
     
