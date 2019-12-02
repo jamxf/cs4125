@@ -141,7 +141,6 @@ public class Register extends javax.swing.JFrame {
         int updateInt;
         //ResultSet rs;
         String emailIn = emailField.getText();
-        System.out.println(emailField.getText());
         String usernameIn = usernameField.getText();
         String passwordIn = String.valueOf(passwordField.getPassword());
         String selectAccountType = accountType.getItemAt(accountType.getSelectedIndex());
