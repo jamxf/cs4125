@@ -24,7 +24,7 @@ public class PartGroup extends Part{
     /**
      * @return Group Name
      */
-    public int getGroupName() {
+    public String getGroupName() {
         return groupName;
     }
 

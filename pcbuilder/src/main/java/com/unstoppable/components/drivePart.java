@@ -44,7 +44,7 @@ public class drivePart extends Part{
         throw new UnsupportedOperationException();
     }
 
-    public String getCapacity(){
+    public int getCapacity(){
         return capacity;
     }
     public String getSpeed(){

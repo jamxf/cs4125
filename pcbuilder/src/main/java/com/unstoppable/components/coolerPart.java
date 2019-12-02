@@ -20,7 +20,7 @@ public class coolerPart extends Part{
 
     }
     
-    public coolerPart(int id, String name, String category, String description, Double price, String status, int compatability, String V, String pU, String formT, String h){
+    public coolerPart(int id, String name, String category, String description, Double price, String status, int compatability, String V, String formT, String h){
         this.formType = formT;
         this.height = h;
         this.partID = id;
@@ -31,9 +31,8 @@ public class coolerPart extends Part{
         this.status = status;
         this.compatability = compatability;
         this.Vendor = V;
-        this.powerUsage = pU;
         this.formType = formT;
-        this.height = t;
+        this.height = h;
     }
 
     public void add(Part newPart){
@@ -106,12 +105,8 @@ public class coolerPart extends Part{
         return stock;
     }
 
-    public int getVendor() {
+    public String getVendor() {
         return Vendor;
-    }
-
-    public int getPU() {
-        return powerUsage;
     }
     
 }

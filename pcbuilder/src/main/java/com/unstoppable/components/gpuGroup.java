@@ -4,25 +4,25 @@ import java.util.Iterator;
 import java.util.ArrayList;
 public class gpuGroup extends Part{
     
-    private String groupname;
+    private String groupName;
     private String groupDescription;
     private ArrayList group = new ArrayList();
 
 
     public gpuGroup(){
-        this.groupname = "";
+        this.groupName = "";
 
 
     }
     public gpuGroup(String gn, String gd){
-        this.gn = groupname;
-        this.gd = groupDescription;
+        this.groupName =gn;
+        this.groupDescription = gd;
     }
 
     /**
      * @return Group Name
      */
-    public int getGroupName() {
+    public String getGroupName() {
         return groupName;
     }
 

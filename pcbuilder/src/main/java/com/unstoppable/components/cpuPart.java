@@ -20,7 +20,7 @@ public class cpuPart extends Part{
 
     }
     
-    public cpuPart(int id, String name, String category, String description, Double price, String status, int compatability, String V, String pU, String cpuT, boolean m, String formT){
+    public cpuPart(int id, String name, String category, String description, Double price, String status, int compatability, String V, int pU, String cpuT, boolean m, String formT){
         this.partID = id;
         this.name = name;
         this.category = category;
@@ -30,9 +30,7 @@ public class cpuPart extends Part{
         this.compatability = compatability;
         this.Vendor = V;
         this.powerUsage = pU;
-        this.cpuType = cpuT;
-        this.M2 = m;
-        this.formType = formT;
+        this.socket = cpuT;
     }
 
     public void add(Part newPart){
@@ -109,14 +107,6 @@ public class cpuPart extends Part{
         return powerUsage;
     }
 
-    public int getCPUtype(){
-        return this.cpuType;
-    }
-    public boolean getM2(){
-        return M2;
-    }
-    public String getfromType(){
-        return formType;
-    }
+
     
 }

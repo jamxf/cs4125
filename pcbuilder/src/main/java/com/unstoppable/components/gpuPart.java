@@ -19,7 +19,7 @@ public class gpuPart extends Part{
 
     }
     
-    public gpuPart(int id, String name, String category, String description, Double price, String status, int compatability, String V, String pU){
+    public gpuPart(int id, String name, String category, String description, Double price, String status, int compatability, String V, int pU){
         this.partID = id;
         this.name = name;
         this.category = category;

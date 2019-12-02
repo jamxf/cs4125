@@ -20,7 +20,7 @@ public class psuPart extends Part{
 
     }
     
-    public psuPart(int id, String name, String category, String description, Double price, String status, int compatability, String V, String c, String r){
+    public psuPart(int id, String name, String category, String description, Double price, String status, int compatability, String V, int c, String r){
         this.partID = id;
         this.name = name;
         this.category = category;

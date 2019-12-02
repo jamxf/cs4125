@@ -22,7 +22,7 @@ public class mbPart extends Part{
 
     }
     
-    public mbPart(int id, String name, String category, String description, Double price, String status, int compatability, String V, String pU, String cpuT, boolean m, String formT){
+    public mbPart(int id, String name, String category, String description, Double price, String status, int compatability, String V, int pU, String cpuT, boolean m, String formT){
         this.partID = id;
         this.name = name;
         this.category = category;
@@ -107,8 +107,8 @@ public class mbPart extends Part{
         return powerUsage;
     }
 
-    public int getSocket(){
-        return this.cpuSocket;
+    public String getSocket(){
+        return cpuSocket;
     }
     public boolean getM2(){
         return M2;

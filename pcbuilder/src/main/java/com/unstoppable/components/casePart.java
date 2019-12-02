@@ -1,6 +1,6 @@
 package com.unstoppable.components;
 
-public class Part{
+public class casePart{
     
     private int partID;
     private String name;
@@ -14,7 +14,7 @@ public class Part{
     private boolean liquidCoolingSupport;
 
     
-    public Part(int id, String name, String category, String description, Double price, String status, int compatability, String s, boolean lCS){
+    public casePart(int id, String name, String category, String description, Double price, String status, int compatability, String s, boolean lCS){
         this.partID = id;
         this.name = name;
         this.category = category;
@@ -30,7 +30,7 @@ public class Part{
     public String getSize(){
         return size;
     }
-    public String getLCS(){
+    public boolean getLCS(){
         return liquidCoolingSupport;
     }
     /**
