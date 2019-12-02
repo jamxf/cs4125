@@ -19,7 +19,7 @@ public class Register extends javax.swing.JFrame {
 
     /** Creates new form Register */
     public Register() {
-        initComponents();                initComponents();
+        initComponents();                
         setTitle("Register");
         this.setLocationRelativeTo(null);
 
@@ -140,7 +140,6 @@ public class Register extends javax.swing.JFrame {
         int updateInt;
         //ResultSet rs;
         String emailIn = emailField.getText();
-        System.out.println(emailField.getText());
         String usernameIn = usernameField.getText();
         String passwordIn = String.valueOf(passwordField.getPassword());
         

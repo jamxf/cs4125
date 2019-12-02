@@ -5,7 +5,7 @@
  */
 package com.unstoppable.orders;
 
-import com.unstoppable.users.User;
+import com.unstoppable.users.CustomerUser;
 import java.util.UUID;
 
 /**
@@ -14,7 +14,7 @@ import java.util.UUID;
  */
 public class Order {
     private String orderID;
-    private User user;
+    private CustomerUser user;
 
     private Build build;
     private Shipping ship;
@@ -58,11 +58,11 @@ public class Order {
         return this.price;
     }
     
-    public User getUser() {
+    public CustomerUser getUser() {
         return user;
     }
 
-    public void setUser(User user) {
+    public void setUser(CustomerUser user) {
         this.user = user;
     }
     
