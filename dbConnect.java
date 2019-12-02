@@ -10,7 +10,7 @@ public class dbConnect {
     private static String username = "sql2310859";
     private static String dbname  = "sql2310859";
     private static Integer portnumber  = 3306;
-    private static String password = "jixvis-3muBho-qofjaf";
+    private static String password = "vV9%dB2!";
     
     public static Connection getConnection()
     {
