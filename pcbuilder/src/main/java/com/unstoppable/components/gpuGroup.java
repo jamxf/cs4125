@@ -1,20 +1,20 @@
+package com.unstoppable.components;
+
 import java.util.Iterator;
 import java.util.ArrayList;
-
-public class PartGroup extends Part{
+public class gpuGroup extends Part{
     
     private String groupname;
     private String groupDescription;
     private ArrayList group = new ArrayList();
 
 
-    public PartGroup(){
+    public gpuGroup(){
         this.groupname = "";
-        this.groupDescription="";
 
 
     }
-    public PartGroup(String gn, String gd){
+    public gpuGroup(String gn, String gd){
         this.gn = groupname;
         this.gd = groupDescription;
     }
@@ -36,11 +36,11 @@ public class PartGroup extends Part{
     /**
      * @return the compatability
      */
-    public void addPart(Part newPart) {
-        group.add(newPartS);
+    public void addGpu(Part newgpu) {
+        group.add(newgpu);
     }
 
-    public void removePart(Part newPart){
+    public void removeGpur(Part newgpu){
         group.remove(newgpu);
     }
 
