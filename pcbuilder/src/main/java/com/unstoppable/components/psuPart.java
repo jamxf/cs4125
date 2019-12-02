@@ -11,7 +11,7 @@ public class psuPart extends Part{
     private int stock;
     private int compatability;
     private String Vendor;
-    private int cpacity;
+    private int capacity;
     private String rating;
 
 
@@ -29,7 +29,7 @@ public class psuPart extends Part{
         this.status = status;
         this.compatability = compatability;
         this.Vendor = V;
-        this.cpacity = c;
+        this.capacity = c;
         this.rating= r;
 
     }

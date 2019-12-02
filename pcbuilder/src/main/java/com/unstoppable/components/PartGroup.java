@@ -5,20 +5,20 @@ import java.util.ArrayList;
 
 public class PartGroup extends Part{
     
-    private String groupname;
+    private String groupName;
     private String groupDescription;
     private ArrayList group = new ArrayList();
 
 
     public PartGroup(){
-        this.groupname = "";
+        this.groupName = "";
         this.groupDescription="";
 
 
     }
     public PartGroup(String gn, String gd){
-        this.gn = groupname;
-        this.gd = groupDescription;
+        this.groupName = gn;
+        this.groupDescription = gd;
     }
 
     /**
@@ -39,11 +39,11 @@ public class PartGroup extends Part{
      * @return the compatability
      */
     public void addPart(Part newPart) {
-        group.add(newPartS);
+        group.add(newPart);
     }
 
     public void removePart(Part newPart){
-        group.remove(newgpu);
+        group.remove(newPart);
     }
 
     public Part getComponent(int partIndex){
