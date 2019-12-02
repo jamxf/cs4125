@@ -23,4 +23,13 @@ public class Order {
         orderID = UUID.randomUUID().toString();
     }
     
+    
+    public String getOrderdID(){
+        return this.orderID;
+    }
+    
+    public Double getPrice(){
+        return this.price;
+    }
+    
 }

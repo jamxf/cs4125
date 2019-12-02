@@ -21,22 +21,20 @@ public class Login {
     private static String username = "sql2310859";
     private static String dbname  = "sql2310859";
     private static Integer portnumber  = 3306;
-    private static String password = "jixvis-3muBho-qofjaf";
+    private static String password = "vV9%dB2!";
     
-    public static Connection getConnection()
-    {
-        Connection connect = null;
+     Connection connect = null;
         
         
         Connection myConn = null;
+        
+        public Login(){
 
         try {
-            myConn = DriverManager.getConnection("sql2.freemysqlhosting.net", "sql2310859", "jixvis-3muBho-qofjaf");
+            myConn = DriverManager.getConnection("jdbc:mysql://sql2.freemysqlhosting.net", "sql2310859", "vV9%dB2!");
+            System.out.println("Success");
         } catch (SQLException ex) {
             System.out.println(ex);        
         }
-        
-        return connect;
     }
-    
 }
