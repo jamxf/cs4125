@@ -1,5 +1,8 @@
 package com.unstoppable.components;
-
+/**
+ *
+ * @author Iansi
+ */
 public class gpuPart extends Part{
     
     private int partID;

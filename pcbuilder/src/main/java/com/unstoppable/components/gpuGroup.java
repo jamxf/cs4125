@@ -1,5 +1,8 @@
 package com.unstoppable.components;
-
+/**
+ *
+ * @author Iansi
+ */
 import java.util.Iterator;
 import java.util.ArrayList;
 public class gpuGroup extends Part{
@@ -25,17 +28,11 @@ public class gpuGroup extends Part{
     public String getGroupName() {
         return groupName;
     }
-
-    /**
-     * @return the group description
-     */
+    
     public String getGroupDesc() {
         return groupDescription;
     }
-
-    /**
-     * @return the compatability
-     */
+    
     public void addGpu(Part newgpu) {
         group.add(newgpu);
     }
