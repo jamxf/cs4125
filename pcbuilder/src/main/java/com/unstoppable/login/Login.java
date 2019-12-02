@@ -6,6 +6,7 @@
 package com.unstoppable.login;
 
 import java.sql.*;
+import java.util.HashSet;
 import java.util.logging.Logger;
 import java.util.logging.Level;
 import javax.swing.*;
@@ -70,11 +71,11 @@ public class Login extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(47, 47, 47)
+                .addContainerGap(47, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(usernameLabel)
                     .addComponent(passwordLabel))
-                .addGap(18, 18, 18)
+                .addGap(18, 18, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(passwordField, javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(usernameField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 181, Short.MAX_VALUE)
@@ -82,24 +83,24 @@ public class Login extends javax.swing.JFrame {
                         .addComponent(cancelButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(loginButton)))
-                .addGap(92, 92, 92))
+                .addContainerGap(92, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(102, 102, 102)
+                .addContainerGap(102, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(usernameField)
                     .addComponent(usernameLabel))
-                .addGap(18, 18, 18)
+                .addGap(18, 18, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(passwordLabel)
                     .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(18, 18, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cancelButton)
                     .addComponent(loginButton))
-                .addGap(84, 84, 84))
+                .addContainerGap(84, Short.MAX_VALUE))
         );
 
         pack();
@@ -112,7 +113,10 @@ public class Login extends javax.swing.JFrame {
         ResultSet rs;
         String usernameIn = usernameField.getText();
         String passwordIn = String.valueOf(passwordField.getPassword());
-               
+        
+        
+
+       
         String query = "Select * from users Where username='" + usernameIn + "' and password='" + passwordIn + "'";
         //String query = "SELECT * FROM users ";
 
@@ -134,12 +138,14 @@ public class Login extends javax.swing.JFrame {
             
             if(rs.next())
             {
-                JOptionPane.showMessageDialog(null, "Valid Login");
+                CustomerHome.main(new String[0]);
+                this.setVisible(false);
+                
 
             }
             else
             {
-                JOptionPane.showMessageDialog(null, "INVALID Login!");
+                JOptionPane.showMessageDialog(null, "Incorrect Username and/or Password! Try again");
             }
             
         } catch (SQLException ex) {
@@ -151,7 +157,8 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_loginButtonActionPerformed
 
     private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
-        System.exit(0);
+        this.setVisible(false);
+        new Menu().setVisible(true);
     }//GEN-LAST:event_cancelButtonActionPerformed
 
     /**

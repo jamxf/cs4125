@@ -36,6 +36,7 @@ public class Build implements Visitable{
     
     public void addPart(Part newPart){
         parts.add(newPart);
+        price += newPart.getPrice();
     }
     
     public ArrayList getParts(){
@@ -47,6 +48,12 @@ public class Build implements Visitable{
     public Double accept(Visitor visitor) {
         return visitor.visit(this);
     }
+
+    @Override
+    public String toString() {
+        return "Build{" + "buildID=" + buildID + ", price=" + price + ", parts=" + parts + '}';
+    }
+    
     
     
 }
