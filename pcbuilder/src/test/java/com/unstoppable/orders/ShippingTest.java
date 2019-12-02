@@ -46,15 +46,11 @@ public class ShippingTest {
         System.out.println("accept");
         Visitor tv = new taxVisitor();
         Shipping s1 = new Shipping(30.00);
-        Build b1 = new Build(1400.00);
 
         Double expResult = 31.25;
-        Double expResult2 = 1575.0;
         Double result = s1.accept(tv);
-        Double result2 = b1.accept(tv);
 
         assertEquals(expResult, result);
-        assertEquals(expResult2, result2);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }

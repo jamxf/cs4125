@@ -11,7 +11,7 @@ public class psuPart extends Part{
     private int stock;
     private int compatability;
     private String Vendor;
-    private int cpacity;
+    private int capacity;
     private String rating;
 
 
@@ -20,7 +20,7 @@ public class psuPart extends Part{
 
     }
     
-    public psuPart(int id, String name, String category, String description, Double price, String status, int compatability, String V, String c, String r){
+    public psuPart(int id, String name, String category, String description, Double price, String status, int compatability, String V, int c, String r){
         this.partID = id;
         this.name = name;
         this.category = category;
@@ -29,7 +29,7 @@ public class psuPart extends Part{
         this.status = status;
         this.compatability = compatability;
         this.Vendor = V;
-        this.cpacity = c;
+        this.capacity = c;
         this.rating= r;
 
     }
